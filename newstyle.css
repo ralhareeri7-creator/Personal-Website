@@ -1,19 +1,12 @@
-/* unvisited link */
 a:link {
   color: red;
 }
-
-/* visited link */
 a:visited {
   color: rgb(129, 8, 228);
 }
-
-/* mouse over link */
 a:hover {
   color: hotpink;
 }
-
-/* selected link */
 a:active {
   color: blue;
 }
@@ -22,39 +15,33 @@ a:active {
   background-color: rgb(255, 127, 197);
   border: none;
   color: black;
-  padding: 15x 32px;
+  padding: 15px 32px;   /* ✅ FIXED */
   text-align: center;
   text-decoration: none;
-  display:inline-block;
+  display: inline-block;
   font-size: 20px;
-
-}
-.oi-regular {
-  font-family: "Oi", serif;
-  font-weight: 400;
-  font-style: normal;
+  cursor: pointer;
 }
 
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 body {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: rgb(135, 211, 230);
 }
+
 h1 {
   color: rgb(12, 12, 12);
-   font-size: 40px;
-  
+  font-size: 40px;
 }
-p { 
+p {
   font-size: 35px;
 }
-h2{
-
-color: rgb(1, 1, 1);
-font-size: 20px;
+h2 {
+  color: rgb(1, 1, 1);
+  font-size: 20px;
 }
 
 .col-1 {width: 8.33%;}
@@ -69,12 +56,18 @@ font-size: 20px;
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
 [class*="col-"] {
   float: left;
   padding: 15px;
-  border: none;
-}
-.center-text {
-    text-align: center;
 }
 
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center-text {
+  text-align: center;
+}
